@@ -5,10 +5,10 @@
 
 
 # Default Switchy user
-declare -r DEFAULT_SWITCHY_USER=root
+declare -r DEFAULT_SWITCHY_USER="root"
 
 # Default Switchy host
-declare -r DEFAULT_SWITCHY_HOST=63.223.118.8
+declare -r DEFAULT_SWITCHY_HOST="63.223.118.8"
 
 # Default Switchy port
-declare -r DEFAULT_SWITCHY_PORT=7070
+declare -r DEFAULT_SWITCHY_PORT="7070"

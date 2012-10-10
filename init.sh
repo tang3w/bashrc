@@ -29,11 +29,9 @@ declare -r PATH_TO_TEMPLATE=${PATH_TO_TEMPLATE:-"$PATH_TO_ROOT/$TEMPLATE_DIR"}
 
 # )))
 
-
 # ((( Add bin to PATH environment vairable
 export PATH="$PATH:$PATH_TO_ROOT/bin"
 # )))
-
 
 # ((( Include common scripts
 . $PATH_TO_SCRIPT/comm.sh
@@ -42,5 +40,12 @@ export PATH="$PATH:$PATH_TO_ROOT/bin"
 # ((( If on iOS device
 if [ $PLATFORM = "iOS" ]; then
     . $PATH_TO_SCRIPT/iOS.sh
+fi
+# )))
+
+# ((( If on PC or MAC
+# Let's say the platform is "loose"
+if [ $PLATFORM = "loose" ]; then
+    . $PATH_TO_SCRIPT/loose.sh
 fi
 # )))
