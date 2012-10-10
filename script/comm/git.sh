@@ -11,6 +11,7 @@ gs(){
     local yon ret
     cd $PATH_TO_ROOT
     git status | grep -s "^nothing to commit" > /dev/null && {
+        git status
         cd - > /dev/null
         return 1
     }
