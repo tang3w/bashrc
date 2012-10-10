@@ -5,4 +5,4 @@
 
 
 . $PATH_TO_SCRIPT/loose.header.sh
-. $PATH_TO_SCTIPT_LOOSE/opt.sh
+. $PATH_TO_SCRIPT_LOOSE/opt.sh
