@@ -10,6 +10,6 @@
 gs(){
     cd $PATH_TO_ROOT
     git add . && git commit -a && git push
-    cd -
+    cd - > /dev/null
 }
 # )))
