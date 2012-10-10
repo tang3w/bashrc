@@ -5,3 +5,9 @@
 
 
 . $PATH_TO_SCRIPT/comm.header.sh
+
+# Common utilities
+. $PATH_TO_SCRIPT_COMM/utils.sh
+
+# Optional profiles
+. $PATH_TO_SCRIPT_COMM/opt.sh

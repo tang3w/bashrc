@@ -9,3 +9,6 @@ declare -r PATH_TO_IOS_SCRIPT=$PATH_TO_SCRIPT/iOS
 
 # Alias for iOS device 
 . $PATH_TO_IOS_SCRIPT/alias.header.sh
+
+# Jailbreak development
+. $PATH_TO_IOS_SCRIPT/JB.sh
