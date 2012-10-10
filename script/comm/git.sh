@@ -8,16 +8,21 @@
 
 # ((( Git synchronize
 gs(){
-    local yon stat
+    local yon ret
     cd $PATH_TO_ROOT
+    git status | grep -s "^nothing to commit" > /dev/null && {
+        cd - > /dev/null
+        return 1
+    }
     git status
     read -p "Quit or continue commit and push? (q|<Enter>): " yon
     [[ -n $yon && ${yon:0:1} = "q" ]] && {
-        cd - > /dev/null; return 1
+        cd - > /dev/null
+        return 1
     }
     git add . && git commit -a && git push
-    stat=$?
+    ret=$?
     cd - > /dev/null
-    return stat
+    return ret
 }
 # )))
