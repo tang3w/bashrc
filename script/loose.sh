@@ -5,4 +5,9 @@
 
 
 . $PATH_TO_SCRIPT/loose.header.sh
+
+# Optional profiles
 . $PATH_TO_SCRIPT_LOOSE/opt.sh
+
+# Jailbreak development
+. $PATH_TO_SCRIPT_LOOSE/JB.sh

@@ -17,10 +17,4 @@ declare -r DEFAULT_ITUNNEL_IPORT=22
 declare -r DEFAULT_ITUNNEL_LPORT=2222
 
 # Default Secure copy path
-declare -r DEFAULT_ISCP_PATH="/var/root/JBDev"
-
-# Default SSH login path
-declare -r DEFAULT_SSH_LOGON_DIR=$DEFAULT_ISCP_PATH
-
-# Default command after logon
-declare -r DEFAULT_LOGON_COMMAND="cd $DEFAULT_SSH_LOGON_DIR"
+declare -r DEFAULT_ISCP_PATH="/var/root/dev"
