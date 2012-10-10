@@ -4,4 +4,4 @@
 # Theos preference settings 
 
 
-. $PATH_TO_IOS_SCRIPT/theos.header.sh
+. $PATH_TO_SCRIPT_IOS/theos.header.sh

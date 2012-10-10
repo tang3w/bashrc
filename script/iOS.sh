@@ -4,11 +4,10 @@
 # Bash profile for iOS device
 
 
-# Constant for iOS
-declare -r PATH_TO_IOS_SCRIPT=$PATH_TO_SCRIPT/iOS
-
-# Alias for iOS device 
-. $PATH_TO_IOS_SCRIPT/alias.header.sh
+. $PATH_TO_SCRIPT/iOS.header.sh
 
 # Jailbreak development
-. $PATH_TO_IOS_SCRIPT/JB.sh
+. $PATH_TO_SCRIPT_IOS/JB.sh
+
+# Theos bash profiles
+. $PATH_TO_SCRIPT_IOS/theos.sh

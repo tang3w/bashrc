@@ -8,4 +8,4 @@
 declare -r THEOS_ROOT=${THEOS:-"/var/theos"}
 
 # New instance creator
-alias nic=nic.pl
+alias nic="nic.pl"

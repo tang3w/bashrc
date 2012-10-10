@@ -5,7 +5,7 @@
 
 
 # Include the header
-. $PATH_TO_IOS_SCRIPT/JB.header.sh
+. $PATH_TO_SCRIPT_IOS/JB.header.sh
 
 # ((( Connect to JB device
 # Make a ssh tunnel to JB device
