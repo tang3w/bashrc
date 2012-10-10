@@ -8,3 +8,6 @@
 
 # Common utilities
 . $PATH_TO_SCRIPT_COMM/utils.sh
+
+# Git bash profiles
+. $PATH_TO_SCRIPT_COMM/git.sh

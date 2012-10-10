@@ -6,4 +6,7 @@
 
 # ((( Alias for iOS platform
 alias vi=vim
+alias rs=respring
+alias rb=reboot
+alias pf=halt
 # )))
