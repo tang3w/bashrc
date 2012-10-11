@@ -67,7 +67,91 @@ is(){
 # )))
 
 
-# ((( are numbers valid
+# ((( Convert .cer to .pem
+der2pem(){
+    local i l path prefix OPTIND=1
+    local usage="Usage: der2pem file1 [file2 ...]"
+
+    [ $# -lt 1 ] && { echo $usage; return 1; }
+    
+    while getopts :hp: opt; do
+        case $opt in
+        :)  echo $usage; return 1 ;;
+        h)  echo $usage; return 0 ;;
+        p)  prefix=$OPTARG ;;
+        esac
+    done
+
+    shift $((OPTIND - 1))
+
+    for (( i = 1, l = $#; i <= l; ++i )) do
+        ! [ -f ${!i} ] && {
+            echo "File ${!i} not found"
+            continue
+        }
+
+        path="./${prefix}$(basename ${!i}).pem"
+
+        [ -f "${path}" ] && {
+            echo "File ${path} existed"
+            continue
+        }
+
+        $(openssl x509 -inform der -outform pem -in ${!i} -out "${path}" &> /dev/null)
+
+        if ! [ -f "${path}" ]; then
+            echo "Failed: cannot convert ${!i}"
+        else
+            echo "${path} has been done!"
+        fi
+    done
+}
+# )))
+
+
+# ((( Convert .p12 to .pem
+p122pem(){
+    local i l path prefix OPTIND=1
+    local usage="Usage: p122pem file1 [file2 ...]"
+
+    [ $# -lt 1 ] && { echo $usage; return 1; }
+    
+    while getopts :hp: opt; do
+        case $opt in
+        :)  echo $usage; return 1 ;;
+        h)  echo $usage; return 0 ;;
+        p)  prefix=$OPTARG ;;
+        esac
+    done
+
+    shift $((OPTIND - 1))
+
+    for (( i = 1, l = $#; i <= l; ++i )) do
+        ! [ -f ${!i} ] && {
+            echo "File ${!i} not found"
+            continue
+        }
+
+        path="./${prefix}$(basename ${!i}).pem"
+
+        [ -f "${path}" ] && {
+            echo "File ${path} existed"
+            continue
+        }
+
+        $(openssl pkcs12 -nocerts -in ${!i} -out "${path}" &> /dev/null)
+
+        if ! [ -f "${path}" ]; then
+            echo "Failed: cannot convert ${!i}"
+        else
+            echo "${path} has been done!"
+        fi
+    done
+}
+# )))
+
+
+# ((( are valid unsigned integers
 # Validate numbers, you can test multiple numbers
 # Usage: isnum [number1 number2 ...]
 isuint(){
@@ -76,7 +160,7 @@ isuint(){
 # )))
 
 
-# ((( are IPv4 valid
+# ((( are valid IPv4s
 # Validate IPv4, you can test multiple IPv4
 # Usage: isipv4 [ip1 ip2 ...]
 isipv4(){
