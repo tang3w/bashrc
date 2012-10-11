@@ -6,6 +6,9 @@
 
 . $PATH_TO_SCRIPT/comm.header.sh
 
+# Common alias
+. $PATH_TO_SCRIPT_COMM/alias.sh
+
 # Common utilities
 . $PATH_TO_SCRIPT_COMM/utils.sh
 

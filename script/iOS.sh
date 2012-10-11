@@ -6,5 +6,8 @@
 
 . $PATH_TO_SCRIPT/iOS.header.sh
 
+# Alias for iOS
+. $PATH_TO_SCRIPT_IOS/alias.sh
+
 # Theos bash profiles
 . $PATH_TO_SCRIPT_IOS/theos.sh

@@ -4,3 +4,5 @@
 # Header of bash profiles for git
 
 
+# Default synchronize repository
+declare -r DEFAULT_SYNC_REPO="$PATH_TO_ROOT"
