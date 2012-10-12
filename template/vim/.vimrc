@@ -57,9 +57,6 @@ set number
 hi lineNr ctermfg=7 ctermbg=8
 " )))
 
-" Set the directory
-set autochdir
-
 " ((( Auto comment at next line
 autocmd Filetype vim setlocal comments-=:\" comments+=f:\"
 autocmd Filetype lua setlocal comments-=:-- comments+=f:--
