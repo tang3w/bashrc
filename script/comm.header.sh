@@ -14,6 +14,7 @@ declare -r PATH_TO_SCRIPT_IOS="${PATH_TO_SCRIPT}/iOS"
 alias ll="ls -A -l -h"
 alias cdb="cd $PATH_TO_ROOT"
 alias cds="cd $PATH_TO_SCRIPT"
+alias cdt="cd $PATH_TO_TEMPLATE"
 
 alias cdc="cd $PATH_TO_SCRIPT_COMM"
 alias cdl="cd $PATH_TO_SCRIPT_LOOSE"

@@ -14,3 +14,6 @@
 
 # Git bash profiles
 . $PATH_TO_SCRIPT_COMM/git.sh
+
+# Vim bash profiles
+. $PATH_TO_SCRIPT_COMM/vim.sh
