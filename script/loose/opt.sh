@@ -27,7 +27,7 @@ switchy(){
     user=${user:-"$DEFAULT_SWITCHY_USER"}
     host=${host:-"$DEFAULT_SWITCHY_HOST"}
     port=${port:-"$DEFAULT_SWITCHY_PORT"}
-    
+
     # Connect to vps
     ssh -N -D $port $user@$host
 
