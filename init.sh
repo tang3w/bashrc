@@ -6,31 +6,24 @@
 
 # ((( Constants
 
-# Root directory
-declare -r ROOT_DIR="bashrc"
-
-# Bin directory
+# Bin directory name
 declare -r BIN_DIR="bin"
-
-# Scripts directory
+# Scripts directory name
 declare -r SCRIPT_DIR="script"
-
-# Template directory
+# Template directory name
 declare -r TEMPLATE_DIR="template"
 
 # Path to root directory
-declare -r PATH_TO_ROOT=${PATH_TO_ROOT:-"$HOME/$ROOT_DIR"}
-
+declare -r PATH_TO_ROOT=$(dirname $(readlink -nf $BASH_SOURCE))
 # Path to scripts dirrctory
-declare -r PATH_TO_SCRIPT=${PATH_TO_SCRIPT:-"$PATH_TO_ROOT/$SCRIPT_DIR"}
-
+declare -r PATH_TO_SCRIPT="${PATH_TO_ROOT}/${SCRIPT_DIR}"
 # Path to template directory
-declare -r PATH_TO_TEMPLATE=${PATH_TO_TEMPLATE:-"$PATH_TO_ROOT/$TEMPLATE_DIR"}
+declare -r PATH_TO_TEMPLATE="${PATH_TO_ROOT}/${TEMPLATE_DIR}"
 
+# ((( Add bin directory to PATH
+export PATH="$PATH:$PATH_TO_ROOT/$BIN_DIR"
 # )))
 
-# ((( Add bin to PATH environment vairable
-export PATH="$PATH:$PATH_TO_ROOT/bin"
 # )))
 
 # ((( Include common scripts
